@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230125 16:14:45.275" rpa="false" schemaversion="3">
+<suite id="s1" name="Add Employee Test" source="C:\Users\40032341\Orange_automation\2__employee_suite\01__add_employee_test.robot">
+<test id="s1-t1" name="Add valid Employee test" line="15">
+<kw name="Launch Browser and Navigate to URL" library="common_functionalities" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 16:14:46.813" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230125 16:14:46.813" endtime="20230125 16:14:49.615"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230125 16:14:49.617" endtime="20230125 16:14:49.749"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230125 16:14:49.749" endtime="20230125 16:14:49.753"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230125 16:14:49.754" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20230125 16:14:49.753" endtime="20230125 16:14:54.713"/>
+</kw>
+<status status="PASS" starttime="20230125 16:14:46.797" endtime="20230125 16:14:54.714"/>
+</kw>
+<kw name="Add valid Employee Template">
+<arg>admin</arg>
+<arg>admin123</arg>
+<arg>john</arg>
+<arg>j</arg>
+<arg>ken</arg>
+<arg>john ken</arg>
+<arg>john</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:54.720" level="INFO">Typing text 'admin' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230125 16:14:54.717" endtime="20230125 16:14:55.895"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:55.895" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230125 16:14:55.956" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230125 16:14:56.033" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230125 16:14:55.895" endtime="20230125 16:14:56.033"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=oxd-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:56.033" level="INFO">Clicking element 'class=oxd-button'.</msg>
+<status status="PASS" starttime="20230125 16:14:56.033" endtime="20230125 16:14:57.464"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(normalize-space(),'PIM')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:57.465" level="INFO">Clicking element 'xpath=//span[contains(normalize-space(),'PIM')]'.</msg>
+<status status="PASS" starttime="20230125 16:14:57.465" endtime="20230125 16:14:59.750"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Add Employee</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:14:59.753" level="INFO">Clicking element 'link=Add Employee'.</msg>
+<status status="PASS" starttime="20230125 16:14:59.751" endtime="20230125 16:15:01.203"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=firstName</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:01.204" level="INFO">Typing text 'john' into text field 'name=firstName'.</msg>
+<status status="PASS" starttime="20230125 16:15:01.203" endtime="20230125 16:15:01.743"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=middleName</arg>
+<arg>${middleName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:01.744" level="INFO">Typing text 'j' into text field 'name=middleName'.</msg>
+<status status="PASS" starttime="20230125 16:15:01.744" endtime="20230125 16:15:01.876"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=lastName</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:01.878" level="INFO">Typing text 'ken' into text field 'name=lastName'.</msg>
+<status status="PASS" starttime="20230125 16:15:01.877" endtime="20230125 16:15:02.037"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[text()=' Save ']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:02.038" level="INFO">Clicking element 'xpath=//button[text()=' Save ']'.</msg>
+<status status="PASS" starttime="20230125 16:15:02.037" endtime="20230125 16:15:02.620"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${firstName}${SPACE}${lastName}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 16:15:02.620" endtime="20230125 16:15:07.703"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//h6[contains(normalize-space(),'${firstName}')]</arg>
+<arg>${expected_1}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230125 16:15:07.741" level="INFO">Element 'xpath=//h6[contains(normalize-space(),'john')]' contains text 'john ken'.</msg>
+<status status="PASS" starttime="20230125 16:15:07.703" endtime="20230125 16:15:07.741"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>name=firstName</arg>
+<arg>value</arg>
+<arg>${expected_2}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20230125 16:15:07.773" level="INFO">Element 'name=firstName' attribute 'value' contains value 'john'.</msg>
+<status status="PASS" starttime="20230125 16:15:07.742" endtime="20230125 16:15:07.773"/>
+</kw>
+<status status="PASS" starttime="20230125 16:14:54.715" endtime="20230125 16:15:07.774"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230125 16:15:07.774" endtime="20230125 16:15:10.014"/>
+</kw>
+<status status="PASS" starttime="20230125 16:14:46.797" endtime="20230125 16:15:10.014"/>
+</test>
+<test id="s1-t2" name="Add valid Employee test" line="15">
+<kw name="Launch Browser and Navigate to URL" library="common_functionalities" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230125 16:15:10.014" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230125 16:15:10.014" endtime="20230125 16:15:11.731"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230125 16:15:11.732" endtime="20230125 16:15:11.850"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230125 16:15:11.850" endtime="20230125 16:15:11.853"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230125 16:15:11.854" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<status status="PASS" starttime="20230125 16:15:11.853" endtime="20230125 16:15:22.589"/>
+</kw>
+<status status="PASS" starttime="20230125 16:15:10.014" endtime="20230125 16:15:22.590"/>
+</kw>
+<kw name="Add valid Employee Template">
+<arg>admin</arg>
+<arg>admin123</arg>
+<arg>mike</arg>
+<arg>mm</arg>
+<arg>jam</arg>
+<arg>mike jam</arg>
+<arg>mike</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:22.593" level="INFO">Typing text 'admin' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230125 16:15:22.592" endtime="20230125 16:15:23.740"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:23.740" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230125 16:15:23.795" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230125 16:15:23.868" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230125 16:15:23.740" endtime="20230125 16:15:23.868"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=oxd-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:23.868" level="INFO">Clicking element 'class=oxd-button'.</msg>
+<status status="PASS" starttime="20230125 16:15:23.868" endtime="20230125 16:15:25.253"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(normalize-space(),'PIM')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:25.255" level="INFO">Clicking element 'xpath=//span[contains(normalize-space(),'PIM')]'.</msg>
+<status status="PASS" starttime="20230125 16:15:25.254" endtime="20230125 16:15:27.241"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Add Employee</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:27.243" level="INFO">Clicking element 'link=Add Employee'.</msg>
+<status status="PASS" starttime="20230125 16:15:27.241" endtime="20230125 16:15:28.258"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=firstName</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:28.258" level="INFO">Typing text 'mike' into text field 'name=firstName'.</msg>
+<status status="PASS" starttime="20230125 16:15:28.258" endtime="20230125 16:15:28.980"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=middleName</arg>
+<arg>${middleName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:28.981" level="INFO">Typing text 'mm' into text field 'name=middleName'.</msg>
+<status status="PASS" starttime="20230125 16:15:28.980" endtime="20230125 16:15:29.096"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=lastName</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:29.097" level="INFO">Typing text 'jam' into text field 'name=lastName'.</msg>
+<status status="PASS" starttime="20230125 16:15:29.096" endtime="20230125 16:15:29.229"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[text()=' Save ']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230125 16:15:29.231" level="INFO">Clicking element 'xpath=//button[text()=' Save ']'.</msg>
+<status status="PASS" starttime="20230125 16:15:29.230" endtime="20230125 16:15:29.767"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${firstName}${SPACE}${lastName}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230125 16:15:29.768" endtime="20230125 16:15:34.421"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//h6[contains(normalize-space(),'${firstName}')]</arg>
+<arg>${expected_1}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230125 16:15:34.459" level="INFO">Element 'xpath=//h6[contains(normalize-space(),'mike')]' contains text 'mike jam'.</msg>
+<status status="PASS" starttime="20230125 16:15:34.421" endtime="20230125 16:15:34.459"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>name=firstName</arg>
+<arg>value</arg>
+<arg>${expected_2}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20230125 16:15:34.501" level="INFO">Element 'name=firstName' attribute 'value' contains value 'mike'.</msg>
+<status status="PASS" starttime="20230125 16:15:34.460" endtime="20230125 16:15:34.502"/>
+</kw>
+<status status="PASS" starttime="20230125 16:15:22.590" endtime="20230125 16:15:34.503"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230125 16:15:34.504" endtime="20230125 16:15:36.759"/>
+</kw>
+<status status="PASS" starttime="20230125 16:15:10.014" endtime="20230125 16:15:36.759"/>
+</test>
+<doc>This file contains test case related to invalid login</doc>
+<status status="PASS" starttime="20230125 16:14:45.275" endtime="20230125 16:15:36.759"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Add Employee Test">Add Employee Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230125 16:15:10.014" level="WARN">Multiple tests with name 'Add valid Employee test' executed in suite 'Add Employee Test'.</msg>
+</errors>
+</robot>
